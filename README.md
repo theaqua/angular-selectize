@@ -26,4 +26,4 @@ Single value:
 
     <select selectize="config" options="suggestions" ng-model="selected"></select>
 
-[Selectize.js](https://github.com/brianreavis/selectize.js/blob/master/docs/usage.md) documentation for `config`.
+Selectize.js [documentation](https://github.com/brianreavis/selectize.js/blob/master/docs/usage.md) for `config`.
