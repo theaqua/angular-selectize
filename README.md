@@ -4,15 +4,17 @@ Installation
 ====
 - Install from bower
 
-      bower install --save ng-selectize
+        bower install --save ng-selectize
 
 - Include styles
-      <link rel="stylesheet" href="bower_components/selectize/css/selectize.css"/>
-      <link rel="stylesheet" href="bower_components/selectize/css/selectize.bootstrap3.css"/>
+
+        <link rel="stylesheet" href="bower_components/selectize/css/selectize.css"/>
+        <link rel="stylesheet" href="bower_components/selectize/css/selectize.bootstrap3.css"/>
 
 - Include scripts
-      <script src="bower_components/selectize.js/dist/js/standalone/selectize.min.js"></script>
-      <script src="bower_components/ng-selectize/ng-selectize.min.js"></script>
+
+        <script src="bower_components/selectize.js/dist/js/standalone/selectize.min.js"></script>
+        <script src="bower_components/ng-selectize/ng-selectize.min.js"></script>
 
 Usage
 ====
