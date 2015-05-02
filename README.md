@@ -24,6 +24,6 @@ Multiple select:
 
 Single value:
 
-    <select type="text" selectize="config" options="suggestions" ng-model="selected"></select>
+    <select selectize="config" options="suggestions" ng-model="selected"></select>
 
 [Selectize.js](https://github.com/brianreavis/selectize.js/blob/master/docs/usage.md) documentation for `config`.
