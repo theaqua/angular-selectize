@@ -8,8 +8,8 @@ Installation
 
 - Include styles
 
-        <link rel="stylesheet" href="bower_components/selectize/dist/css/selectize.css"/>
-        <link rel="stylesheet" href="bower_components/selectize/dist/css/selectize.bootstrap3.css"/>
+        <link rel="stylesheet" href="bower_components/selectize/dist/css/selectize.css">
+        <link rel="stylesheet" href="bower_components/selectize/dist/css/selectize.bootstrap3.css">
 
 - Include scripts
 
