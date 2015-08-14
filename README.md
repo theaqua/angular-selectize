@@ -1,7 +1,10 @@
 Angular.js directive for [selectize.js](http://brianreavis.github.io/selectize.js/). New version based on @kbanman [work](https://github.com/kbanman/selectize-ng).
 
-Installation
-====
+### No longer maintained
+I don't have time for maintain this library, but PRs are welcome. Also I highly recommend use [ui-select](https://github.com/angular-ui/ui-select) because it's native.
+
+### Installation
+
 - Install from bower
 
         bower install --save ng-selectize
@@ -16,8 +19,7 @@ Installation
         <script src="bower_components/selectize/dist/js/standalone/selectize.min.js"></script>
         <script src="bower_components/ng-selectize/ng-selectize.min.js"></script>
 
-Usage
-====
+### Usage
 Multiple select:
 
     <input type="text" selectize="config" options="suggestions" ng-model="selected">
