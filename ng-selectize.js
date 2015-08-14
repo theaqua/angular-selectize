@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ng-selectize', ['ng']).directive('selectize', function() {
+angular.module('ng-selectize', ['ng']).directive('selectize', [function() {
   return {
     restrict: 'A',
     require: 'ngModel',
@@ -102,15 +102,17 @@ angular.module('ng-selectize', ['ng']).directive('selectize', function() {
       }
 
       function setSelectizeOptions(newOptions) {
-        var values = parseValues(ngModel.$viewValue);
+        timeout(function() {
+          var values = parseValues(ngModel.$viewValue);
 
-        if (options.mode === 'multi' && newOptions) {
-          restoreInvalidValues(newOptions, values);
-        };
+          if (options.mode === 'multi' && newOptions) {
+            restoreInvalidValues(newOptions, values);
+          };
 
-        selectize.addOption(newOptions);
-        selectize.refreshOptions(false);
-        setSelectizeValue(values);
+          selectize.addOption(newOptions);
+          selectize.refreshOptions(false);
+          setSelectizeValue(values);
+        });
       }
 
       scope.$parent.$watch(attrs.ngModel, setSelectizeValue);
@@ -126,4 +128,4 @@ angular.module('ng-selectize', ['ng']).directive('selectize', function() {
       });
     }
   };
-});
+}]);
