@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ng-selectize', ['ng']).directive('selectize', [function() {
+angular.module('ng-selectize', ['ng']).directive('selectize', [function($timeout) {
   return {
     restrict: 'A',
     require: 'ngModel',
@@ -102,7 +102,7 @@ angular.module('ng-selectize', ['ng']).directive('selectize', [function() {
       }
 
       function setSelectizeOptions(newOptions) {
-        timeout(function() {
+        $timeout(function() {
           var values = parseValues(ngModel.$viewValue);
 
           if (options.mode === 'multi' && newOptions) {
