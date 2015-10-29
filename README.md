@@ -1,8 +1,5 @@
 Angular.js directive for [selectize.js](http://brianreavis.github.io/selectize.js/). New version based on @kbanman [work](https://github.com/kbanman/selectize-ng).
 
-### No longer maintained
-I don't have time for maintain this library, but PRs are welcome. Also I highly recommend use [ui-select](https://github.com/angular-ui/ui-select) because it's native.
-
 ### Installation
 
 - Install from bower
