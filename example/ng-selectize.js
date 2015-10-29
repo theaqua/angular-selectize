@@ -7,7 +7,8 @@
       require: 'ngModel',
       scope: {
         selectize: '&',
-        options: '&'
+        options: '&',
+        ngDisabled: '='
       },
       link: function(scope, element, attrs, ngModel) {
         var changing, options, selectize, invalidValues = [];
@@ -29,6 +30,7 @@
         });
 
         function setModelValue(value) {
+          value = value && value !== '' ? value : undefined;
           if (changing) {
             return;
           }
@@ -111,11 +113,26 @@
             restoreInvalidValues(newOptions, values);
           }
 
-          selectize.addOption(newOptions);
-          selectize.refreshOptions(false);
-          setSelectizeValue(values);
+          if(newOptions) {
+            if(Array.isArray(newOptions) && newOptions.length === 0) {
+              selectize.clearOptions();
+            }
+            selectize.addOption(newOptions);
+            selectize.refreshOptions(false);
+            setSelectizeValue(values);
+          }
         }
 
+        var toggleDisabled = function(disabled) {
+          if(disabled) {
+            selectize.disable();
+            return;
+          }
+
+          selectize.enable();
+        };
+
+        scope.$watch('ngDisabled', toggleDisabled);
         scope.$parent.$watch(attrs.ngModel, setSelectizeValue);
 
         if (attrs.options) {
