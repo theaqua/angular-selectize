@@ -19,10 +19,10 @@ Angular.js directive for [selectize.js](http://brianreavis.github.io/selectize.j
 ### Usage
 Multiple select:
 
-    <input type="text" selectize="config" options="suggestions" ng-model="selected">
+    <input type="text" selectize="config" options="suggestions" ng-model="selected" ng-disabled="disabled"/>
 
 Single value:
 
-    <select selectize="config" options="suggestions" ng-model="selected"></select>
+    <select selectize="config" options="suggestions" ng-model="selected" ng-disabled="disabled"></select>
 
 Selectize.js [documentation](https://github.com/brianreavis/selectize.js/blob/master/docs/usage.md) for `config`.
