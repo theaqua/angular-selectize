@@ -117,6 +117,8 @@
             if(Array.isArray(newOptions) && newOptions.length === 0) {
               selectize.clearOptions();
             }
+            selectize.setValue('', true);
+            selectize.clearOptions();
             selectize.addOption(newOptions);
             selectize.refreshOptions(false);
             setSelectizeValue(values);
