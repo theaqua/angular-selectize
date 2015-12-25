@@ -150,4 +150,4 @@
     };
   }]);
 
-})(this.angular);
+})(window.angular);
