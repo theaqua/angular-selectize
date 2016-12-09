@@ -90,6 +90,9 @@
         }
 
         function setSelectizeValue(value) {
+            if(value === undefined){
+                return;
+            }
           timeout(function() {
             var values = parseValues(value);
 
