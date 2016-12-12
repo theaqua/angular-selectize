@@ -90,6 +90,9 @@
         }
 
         function setSelectizeValue(value) {
+            if(value === undefined){
+                return;
+            }
           timeout(function() {
             var values = parseValues(value);
 
@@ -114,9 +117,11 @@
           }
 
           if(newOptions) {
+            selectize.setValue('', true);
             if(Array.isArray(newOptions) && newOptions.length === 0) {
               selectize.clearOptions();
             }
+            selectize.clearOptions();
             selectize.addOption(newOptions);
             selectize.refreshOptions(false);
             setSelectizeValue(values);
@@ -148,4 +153,4 @@
     };
   }]);
 
-})(this.angular);
+})(window.angular);
